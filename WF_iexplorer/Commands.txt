@@ -1,0 +1,41 @@
+﻿
+Socket Characteristics:
+
+Listening in port:34197 and IP:192.***
+	AddressFamily.InterNetwork,
+    SocketType.Stream,
+    ProtocolType.Tcp
+
+"Start"
+	Starts the internet explorer on the youtube page.
+
+"Search;<string>;"
+	Introduces <string> and searchs for it.
+
+"Next Result"
+	Selects next video in results or related
+
+"Previous Result"
+	Selects last highlighted video selected
+
+
+"Click"
+	Clicks on the selected video by 'next' or 'before' commands
+
+"Play/Pause"
+	Press the youtube player's next video.
+
+"Next Video"
+	Next video ( next button in Youtube player)
+
+"Full Screen"
+	It's suppose to put a video in full-screen, but now it only exits from full-screen
+
+"Close Advertisement"
+	Closes the skip-button ad, that ad which you can skip after 5 seconds
+
+"center"
+	Sets the window frame to the (0,0) position
+"ScrollBy;<x>;<y>;"
+"Close IE"
+	Closes the Internet Window. So you can start it again, you should call: "start"
