@@ -19,6 +19,7 @@ state_stringElement.textContent = "Not Connected\n";
 
 //function to append Li to the ordered List
 var socket;
+
 document.getElementById('connectIP').value = "192.168.1.136";
 
 var Bucle = (txt) => {
@@ -28,7 +29,7 @@ var Bucle = (txt) => {
             if (txt == 'connect') {
                 try {
 
-                    document.getElementById("ConnectButton").disabled = true;
+                    DisableClickedButton(document.getElementById("ConnectButton"));
 
                     //Communication
                     let IP = document.getElementById('connectIP').value;
@@ -53,6 +54,7 @@ var Bucle = (txt) => {
                         document.getElementById('Second_OL').style.display = 'none';
                     }
                     socket.addEventListener('error', (event) => {
+                        EnableClickedButton(document.getElementById("ConnectButton"));
                         restore2BeforeStart('Error in connection')
                     });
                     socket.addEventListener('close', (ev) => {
@@ -63,7 +65,6 @@ var Bucle = (txt) => {
                     state = STATES.STARTED;
                 } catch (error) {
                     console.log(error);
-                    document.getElementById("ConnectButton").disabled = false;
                 }
             }
             break;
@@ -79,3 +80,16 @@ var Bucle = (txt) => {
 }
 
 Bucle();
+
+var DisableClickedButton = (button) => {
+    button.disabled = true;
+    button.children[1].textContent = "Connecting...";
+    var Loading = button.children[0];//span
+    Loading.className = "spinner-border spinner-border-sm";
+}
+var EnableClickedButton = (button) => {
+    button.disabled = false;
+    button.children[1].textContent = "Connect:";
+    var Loading = button.children[0];
+    Loading.className = "";
+}
