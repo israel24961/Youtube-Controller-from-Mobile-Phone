@@ -1,4 +1,4 @@
-# Youtube-Controller-from-Mobile-Phone
+# Youtube-Controller-from-Mobile-Phone (Since Window made the transition to CHROMIUM EDGE, it doesn't work)
 Just a simple controller for Youtube, you can skip ads, search for videos, pause, play, next video,  and go through the recommended videos.
 The flow of the program goes this way:
 ![alt text](https://github.com/israel24961/Youtube-Controller-from-Mobile-Phone/blob/master/Flow.png)
